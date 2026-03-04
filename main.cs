@@ -3,7 +3,6 @@ using System.Collections.Generic;
 
 namespace TP_Bibliotheque_SIO
 {
-    // PARTIE 1 : Définition de la structure
     struct Livre
     {
         public string Titre;
@@ -17,7 +16,7 @@ namespace TP_Bibliotheque_SIO
     {
         static void Main(string[] args)
         {
-            // --- PARTIE 1 & 2 : Création et Liste ---
+            // PARTIE 1 & 2 : Création et Liste
             List<Livre> bibliotheque = new List<Livre>();
 
             Livre l1;
@@ -51,7 +50,7 @@ namespace TP_Bibliotheque_SIO
                 Console.WriteLine($"- {livre.Titre} ({livre.Auteur}, {livre.Annee})");
             }
 
-            // --- PARTIE 3 : Filtrages ---
+            // PARTIE 3 : Filtrages
             Console.WriteLine("\n=== Livres disponibles ===");
             foreach (var livre in bibliotheque)
             {
@@ -64,7 +63,7 @@ namespace TP_Bibliotheque_SIO
                 if (livre.Pages > 300) Console.WriteLine(livre.Titre);
             }
 
-            // --- PARTIE 4 : Calculs ---
+            // PARTIE 4 : Calculs
             int totalPages = 0;
             int nbDispo = 0;
             foreach (var livre in bibliotheque)
@@ -75,7 +74,7 @@ namespace TP_Bibliotheque_SIO
             Console.WriteLine($"\nTotal de pages dans la bibliothèque : {totalPages}");
             Console.WriteLine($"Nombre de livres dispos : {nbDispo}");
 
-            // --- PARTIE 5 : Recherche ---
+            // PARTIE 5 : Recherche
             Console.Write("\nEntrez un titre à rechercher : ");
             string recherche = Console.ReadLine();
             bool trouve = false;
@@ -91,7 +90,7 @@ namespace TP_Bibliotheque_SIO
             }
             if (!trouve) Console.WriteLine("Livre introuvable.");
 
-            // --- PARTIE 6 : Emprunt 
+            // PARTIE 6 : Emprunt 
             Console.Write("\nQuel titre souhaitez-vous emprunter ? ");
             string titreEmprunt = Console.ReadLine();
             bool empruntReussi = false;
